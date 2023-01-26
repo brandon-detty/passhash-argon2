@@ -16,13 +16,13 @@ func checkPasswordCLI() {
 		return
 	}
 
-	salt, err := getHex("Salt", hasher.CondimentLength)
+	pepper, err := getHex("Pepper", hasher.CondimentLength)
 	if err != nil {
 		fmt.Println("Error:", err)
 		return
 	}
 
-	pepper, err := getHex("Pepper", hasher.CondimentLength)
+	salt, err := getHex("Salt", hasher.CondimentLength)
 	if err != nil {
 		fmt.Println("Error:", err)
 		return
